@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a58949255b1fb48b2dcc14545ecc06, type: 3}
+  m_Name: SoundDataMaster
+  m_EditorClassIdentifier: 
+  containers:
+  - {fileID: 11400000, guid: aa421fdd9f2d11b49ac45cf0e6d8d813, type: 2}
+  - {fileID: 11400000, guid: 1e693c9841c85d041bd41615e986467d, type: 2}

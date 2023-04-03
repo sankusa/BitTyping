@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c8a673aee85d24b91231eb5f02d1f8, type: 3}
+  m_Name: LeanLauncherData
+  m_EditorClassIdentifier: 
+  assetDataList:
+  - asset: {fileID: 11400000, guid: 44881a6902dd2c94ba1ba6364ac692ca, type: 2}
+    label: 
+  - asset: {fileID: 11400000, guid: 6071e71ba22397c419a6150a77bbaf0c, type: 2}
+    label: 
+  - asset: {fileID: 11400000, guid: 940a3fef1b354b84f98480b0bacc6b07, type: 2}
+    label: "\u9867\u5BA2\u30DE\u30B9\u30BF"
+  - asset: {fileID: 11400000, guid: f1cdf7aa361e5174fa981c992ca6b00f, type: 2}
+    label: 
+  - asset: {fileID: 11400000, guid: 931b07d4b41d3564cac2f04bda1d8e7e, type: 2}
+    label: 
+  - asset: {fileID: 11400000, guid: 5dc1dde361dee274ebbe818ff591dc2d, type: 2}
+    label: 
+  - asset: {fileID: 11400000, guid: 151dcd10d5dfc084885d3bce671ba00d, type: 2}
+    label: "\u679C\u5B9F\u30D1\u30E9\u30E1\u30FC\u30BF"
+  - asset: {fileID: 11400000, guid: fc235c04fd7e19844ad2d01381401f4b, type: 2}
+    label: 
+  - asset: {fileID: 11400000, guid: af7736b66ce15a04d8025b0e56e507ce, type: 2}
+    label: 
+  - asset: {fileID: 11400000, guid: 77a5e8de30a9fc7429cf091266de1612, type: 2}
+    label: 
+  - asset: {fileID: 11400000, guid: ea053ff3f6ab2b649b25c9fe4bfe7041, type: 2}
+    label: 
+  - asset: {fileID: 11400000, guid: b4eba516d772c424891a1698603f5836, type: 2}
+    label: 
+  - asset: {fileID: 11400000, guid: 267f0234e0444314186ae6d62d5c3b98, type: 2}
+    label: 
+  - asset: {fileID: 102900000, guid: 3b08362fe526be34a9207299b3044e9c, type: 3}
+    label: "01_\u5171\u901A/\u30D7\u30EC\u30CF\u30D6"
+  - asset: {fileID: 102900000, guid: 8293259e1d3ef3740b57c2829d255961, type: 3}
+    label: 
+  - asset: {fileID: 102900000, guid: a2c65b547adcd8f45ac3c81e43eed524, type: 3}
+    label: 
+  - asset: {fileID: 102900000, guid: 52499a0feab5b844c8e9b591b582b81b, type: 3}
+    label: 
+  - asset: {fileID: 102900000, guid: 7541af1f300491449b2e2f68bc06033e, type: 3}
+    label: 
+  - asset: {fileID: 102900000, guid: 92b49034be72a6246a2fa42f2429b748, type: 3}
+    label: 
+  - asset: {fileID: 102900000, guid: 50400be2850a35045a211c89246143c2, type: 3}
+    label: TD
+  - asset: {fileID: 102900000, guid: 711a2118a8ddd3749b60cfd48564c94b, type: 3}
+    label: TD/Scripts
+  - asset: {fileID: 102900000, guid: 9cb33c16a5731fa418afcdc39991cdca, type: 3}
+    label: "\u5171\u901A/Resources"
+  - asset: {fileID: 102900000, guid: e87daef616390a74cb99afb3cfdd8ba7, type: 3}
+    label: "\u5171\u901A/Scripts/"
+  - asset: {fileID: 102900000, guid: c9103f3627f6db644b753803ed392fff, type: 3}
+    label: "\u5171\u901A/Scripts/Domain"
+  - asset: {fileID: 11500000, guid: b9516e08a9c4ba448bff931bc8588af1, type: 3}
+    label: 
+  - asset: {fileID: 11500000, guid: 548c5fd018e5a254389b96a233e42f3c, type: 3}
+    label: 
+  - asset: {fileID: 11500000, guid: c5da15d4c727dd64abf7540100e0f0cf, type: 3}
+    label: 
+  - asset: {fileID: 11500000, guid: 98649f491ddf578488786912bb812226, type: 3}
+    label: "\u30C7\u30D0\u30AC"
+  - asset: {fileID: 102900000, guid: 960e88cdd637cd6458849f58e2263951, type: 3}
+    label: 
+  - asset: {fileID: 102900000, guid: d8b53a20bcfa1324e8c5e8eefd7dc76d, type: 3}
+    label: 
+  - asset: {fileID: 102900000, guid: 4afe3cbce01bb0444924ce21bb55eef3, type: 3}
+    label: 
+  - asset: {fileID: 4900000, guid: b9cb18afed0ad6d418018a4d6fe4954a, type: 3}
+    label: "\u30AF\u30EC\u30B8\u30C3\u30C8\u4E00\u89A7"
