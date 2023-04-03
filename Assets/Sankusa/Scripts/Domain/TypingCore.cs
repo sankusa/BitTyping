@@ -61,6 +61,7 @@ namespace Sankusa.BitTyping.Domain
                 if(successBitCount == 16)
                 {
                     AdvanceText();
+                    successBitCount = 0;
                 }
                 onSuccess.OnNext(Unit.Default);
             }

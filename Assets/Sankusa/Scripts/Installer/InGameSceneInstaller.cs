@@ -7,6 +7,9 @@ namespace Sankusa.BitTyping.Installer
 {
     public class InGameSceneInstaller : MonoInstaller
     {
+        [SerializeField] private TypingView charTypingView;
+        [SerializeField] private TypingView binaryTypingView;
+
         public override void InstallBindings()
         {
             // Domain
@@ -26,6 +29,28 @@ namespace Sankusa.BitTyping.Installer
                 .NonLazy();
 
             // Presentation
+            Container
+                .Bind<TypingView>()
+                .WithId(TypingViewInjectId.Char)
+                .FromInstance(charTypingView)
+                .AsCached();
+
+            Container
+                .Bind<TypingView>()
+                .WithId(TypingViewInjectId.Binary)
+                .FromInstance(binaryTypingView)
+                .AsCached();
+
+            Container
+                .BindInterfacesAndSelfTo<TypingPresenter>()
+                .AsSingle()
+                .NonLazy();
+
+            Container
+                .BindInterfacesAndSelfTo<KeyboardInputer>()
+                .AsSingle()
+                .NonLazy();
+
             Container
                 .BindInterfacesAndSelfTo<InGameLoop>()
                 .AsSingle()

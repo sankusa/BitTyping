@@ -6,6 +6,7 @@ using System;
 using Zenject;
 using Cysharp.Threading.Tasks;
 using System.Threading;
+using UniRx;
 
 namespace Sankusa.BitTyping.Presentation
 {
@@ -14,18 +15,22 @@ namespace Sankusa.BitTyping.Presentation
         private readonly GameTimer gameTimer;
         private readonly Score score;
         private readonly TypingCore typingCore;
+        private readonly KeyboardInputer keyboardInputer;
         private readonly CancellationTokenSource source = new CancellationTokenSource();
+        private readonly CompositeDisposable compositeDisposable = new CompositeDisposable();
 
         [Inject]
         public InGameLoop(
             GameTimer gameTimer,
             Score score,
-            TypingCore typingCore
+            TypingCore typingCore,
+            KeyboardInputer keyboardInputer
         )
         {
             this.gameTimer = gameTimer;
             this.score = score;
             this.typingCore = typingCore;
+            this.keyboardInputer = keyboardInputer;
         } 
 
         public void Initialize()
@@ -36,10 +41,13 @@ namespace Sankusa.BitTyping.Presentation
         private async UniTask StartAsync(CancellationToken token)
         {
             // 初期設定
-            gameTimer.Initialize(10f);
+            gameTimer.Initialize(600f);
 
             // スタート
             gameTimer.Start();
+            keyboardInputer.Start();
+
+            typingCore.AddText("あなたは速水もこみちになります。おあｆびあぶふぇｌぶえBfuibafibiblえうｓｆｈべうあ");
 
             while(true)
             {
@@ -51,8 +59,11 @@ namespace Sankusa.BitTyping.Presentation
 
             // 終了
             gameTimer.Stop();
+            keyboardInputer.Stop();
 
             Debug.Log(gameTimer.ElapsedTime);
+
+            compositeDisposable.Clear();
 
             await UniTask.CompletedTask;
         }
@@ -60,6 +71,7 @@ namespace Sankusa.BitTyping.Presentation
         public void Dispose()
         {
             source.Cancel();
+            compositeDisposable.Dispose();
         }
     }
 }
