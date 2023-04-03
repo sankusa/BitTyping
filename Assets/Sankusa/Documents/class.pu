@@ -1,0 +1,62 @@
+@startuml BitTyping
+namespace Domain {
+    class TypingCore {
+        + void AddText(string text)
+        + void InputBit(bool input)
+        + IObservable<string> OnAddText
+        + IObservable<string> OnAddBinaryText
+        + IObservable<Unit> OnSuccess
+        + IObservable<Unit> OnFailed
+        + IObservable<Unit> OnAdvanceText
+        + IObservable<Unit> OnAdvanceBinaryText
+        - string text
+        - List<bool> binaryText
+    }
+
+    class GameTimer
+    class Score
+    class TextMaster
+    TextMaster -> TextData
+    class TextData
+}
+namespace Presentation {
+    class ButtonInputer
+    ButtonInputer -> Domain.TypingCore
+
+    class KeyboardInputer
+    KeyboardInputer -> Domain.TypingCore
+
+    class InGameLoop
+    InGameLoop -> Domain.TextMaster
+    InGameLoop -> ButtonInputer : activate/inactivate
+    InGameLoop -> KeyboardInputer : activate/inactivate
+    InGameLoop -> Domain.GameTimer
+    InGameLoop -> Domain.Score
+    InGameLoop -> StartPerformer
+    InGameLoop -> SuccessPerformer
+    InGameLoop -> FailPerformer
+
+    class ScorePresenter
+    ScorePresenter -> Domain.Score
+    ScorePresenter -> ScoreView
+    class ScoreView
+
+    class TimePresenter
+    TimePresenter -> Domain.GameTimer
+    TimePresenter -> TimeView
+    class TimeView
+
+    class TypingView
+    class TypingPresenter
+    TypingPresenter -> Domain.TypingCore
+    TypingPresenter -> TypingView
+
+    class StartPerformer
+    class SuccessPerformer
+    class FailPerformer
+
+    class TypingManView
+    class TypingManPresenter
+    TypingManPresenter -> TypingManView
+}
+@enduml
