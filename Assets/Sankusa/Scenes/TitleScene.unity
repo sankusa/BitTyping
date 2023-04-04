@@ -1254,6 +1254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgmId: BGM_Title
   startButton: {fileID: 354991626}
+  titleText: {fileID: 1670806785}
 --- !u!4 &242664780
 Transform:
   m_ObjectHideFlags: 0
@@ -4591,7 +4592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progress: 1
   playOnEnable: 1
-  playByProgress: 1
+  playByProgress: 0
   isLoop: 1
   animationData:
     speed: 1
@@ -4753,9 +4754,9 @@ MonoBehaviour:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0
-          inSlope: 10.003884
-          outSlope: 10.003884
+          value: 9.992706
+          inSlope: 0.117977664
+          outSlope: 0.117977664
           tangentMode: 34
           weightedMode: 0
           inWeight: 0
@@ -4763,8 +4764,8 @@ MonoBehaviour:
         - serializedVersion: 3
           time: 1.0108032
           value: 10.1119585
-          inSlope: 10.003884
-          outSlope: 10.003884
+          inSlope: 0.117977664
+          outSlope: 0.117977664
           tangentMode: 34
           weightedMode: 0
           inWeight: 0.33333334
@@ -5082,6 +5083,10 @@ PrefabInstance:
     - target: {fileID: 8783013328818573114, guid: 7dd00757ffe14cb4a9b64b9d7ac8f254, type: 3}
       propertyPath: m_Name
       value: Base Text (TMP)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783013328818573114, guid: 7dd00757ffe14cb4a9b64b9d7ac8f254, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8853432716698858664, guid: 7dd00757ffe14cb4a9b64b9d7ac8f254, type: 3}
       propertyPath: m_text

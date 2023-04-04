@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e2144d01059c9c4dbfd6ee081ffe3aa, type: 3}
+  m_Name: TypingTextData3
+  m_EditorClassIdentifier: 
+  typingText: "\u6C341\u30FB1/2\u30AB\u30C3\u30D7\u3001\u7389\u306D\u304E1/2\u500B\u3001\u30CB\u30F3\u30B8\u30F31/3\u672C\u3001\u3058\u3083\u304C\u3044\u30821\u500B\u3001\u30D9\u30FC\u30B3\u30F32\u679A\u3001\u8584\u529B\u7C89\u5927\u3055\u30582\u676F\u3001\u3042\u3055\u308A(\u6BBB\u4ED8\u304D)350g\u3001\u725B\u4E731\u30AB\u30C3\u30D7\u3001\u3053\u3057\u3087\u3046\u5C11\u3005"

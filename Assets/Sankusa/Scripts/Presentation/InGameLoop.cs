@@ -73,6 +73,10 @@ namespace Sankusa.BitTyping.Presentation
         {
             // シーン引数取得
             InGameArg inGameArg = sceneArgStore.Pop<InGameArg>();
+            if(inGameArg == null)
+            {
+                inGameArg = new InGameArg(60f, 1);
+            }
 
             // 初期設定
             gameTimer.Initialize(inGameArg.Time);
@@ -105,7 +109,7 @@ namespace Sankusa.BitTyping.Presentation
             buttonInputer.SetActive(true);
             typingManView.StartLinkTypingInput();
 
-            typingCore.AddText("あなたは速水もこみちになります。おあｆびあぶふぇｌぶえBfuibafibiblえうｓｆｈべうあ");
+            typingCore.AddText(TypingTextMaster.Instance.GetRandom());
 
             typingCore.OnSuccess.Subscribe(_ => score.Increment()).AddTo(compositeDisposable);
             typingCore.OnFailed.Subscribe(_ => life.Decrement()).AddTo(compositeDisposable);

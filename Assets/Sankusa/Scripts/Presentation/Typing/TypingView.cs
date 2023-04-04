@@ -16,6 +16,8 @@ namespace Sankusa.BitTyping.Presentation
         [SerializeField] private int displayIndexMax;
         [SerializeField] private Transform charCenterPositionMarker;
         [SerializeField] private float charSpace = 30f;
+        [SerializeField] private float additionalaCharSpaceDisplayIndex0toMinus;
+        [SerializeField] private float alphaForMinusDisplayIndex;
         [SerializeField] private float charUnitSlideDuration = 0.2f;
         [SerializeField] private Vector2 featuredCharUnitScale;
         
@@ -93,12 +95,12 @@ namespace Sankusa.BitTyping.Presentation
 
         public Vector2 GetCharPosition(int displayIndex)
         {
-            return (Vector2)charCenterPositionMarker.position + new Vector2(displayIndex * charSpace, 0);
+            return (Vector2)charCenterPositionMarker.position + new Vector2(displayIndex * charSpace, 0) + (displayIndex >= 0 ? new Vector2(additionalaCharSpaceDisplayIndex0toMinus, 0) : Vector2.zero);
         }
 
         private void UpdateTextColor()
         {
-            charUnitList.ForEach(x => x.CharUnit.SetAlpha(x.DisplayIndex >= 0 ? 1 : 0.5f));
+            charUnitList.ForEach(x => x.CharUnit.SetAlpha(x.DisplayIndex >= 0 ? 1 : alphaForMinusDisplayIndex));
         }
     }
 }

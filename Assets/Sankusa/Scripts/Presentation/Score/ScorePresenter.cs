@@ -25,7 +25,7 @@ namespace Sankusa.BitTyping.Presentation
                 {
                     int byteCount = x / 8;
                     int bitCount = x % 8;
-                    scoreView.Draw((byteCount > 0 ? byteCount + " Byte " : "") + bitCount + " Bit");
+                    scoreView.Draw((byteCount > 0 ? byteCount + " Byte " : "") + bitCount + " Bit 送信完了");
                 })
                 .AddTo(compositeDisposable);
         }

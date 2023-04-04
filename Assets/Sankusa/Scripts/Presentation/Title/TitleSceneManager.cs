@@ -15,6 +15,7 @@ namespace Sankusa.BitTyping.Presentation
     {
         [SerializeField, SoundId] private string bgmId;
         [SerializeField] private UIButton startButton;
+        [SerializeField] private GameObject titleText;
         [Inject] private SceneArgStore sceneArgStore;
 
         void Start()
@@ -25,6 +26,9 @@ namespace Sankusa.BitTyping.Presentation
             });
 
             SoundManager.Instance.CrossFadeBgm(bgmId);
+
+            // TextMeshProGeometryAnimatorがOnValidate時にActiveだとチェック処理が走り、エラーになる場合があるため。
+            titleText.SetActive(true);
         }
 
         public void StartTimeAttackMode()
