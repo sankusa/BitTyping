@@ -9,10 +9,12 @@ using Sankusa.BitTyping.Domain;
 
 namespace Sankusa.BitTyping.Presentation
 {
-    public class KeyboardInputer : IDisposable
+    public class KeyboardInputer : ITickable,  IDisposable
     {
         private readonly TypingCore typingCore;
         private readonly CompositeDisposable compositeDisposable = new CompositeDisposable();
+
+        private bool active;
 
         [Inject]
         public KeyboardInputer(TypingCore typingCore)
@@ -20,24 +22,15 @@ namespace Sankusa.BitTyping.Presentation
             this.typingCore = typingCore;
         }
 
-        public void Start()
+        public void SetActive(bool active)
         {
-            Observable
-                .EveryUpdate()
-                .Subscribe(_ =>
-                {
-                    Update();
-                })
-                .AddTo(compositeDisposable);
+            this.active = active;
         }
 
-        public void Stop()
+        public void Tick()
         {
-            compositeDisposable.Clear();
-        }
-
-        private void Update()
-        {
+            if(!active) return;
+            
             if(Keyboard.current.digit0Key.wasPressedThisFrame)
             {
                 typingCore.Input(false);

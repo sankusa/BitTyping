@@ -16,6 +16,8 @@ namespace Sankusa.BitTyping.Presentation
         [SerializeField] private int displayIndexMax;
         [SerializeField] private Transform charCenterPositionMarker;
         [SerializeField] private float charSpace = 30f;
+        [SerializeField] private float charUnitSlideDuration = 0.2f;
+        [SerializeField] private Vector2 featuredCharUnitScale;
         
         private List<char> charList = new List<char>();
         private List<CharUnitControlData> charUnitList = new List<CharUnitControlData>();
@@ -85,7 +87,8 @@ namespace Sankusa.BitTyping.Presentation
         // 全CharUnitを既定の位置に動かす
         private void MoveCharUnitToCorrectPosition(CharUnitControlData data)
         {
-            data.CharUnit.Move(GetCharPosition(data.DisplayIndex), 0.2f);
+            data.CharUnit.Move(GetCharPosition(data.DisplayIndex), charUnitSlideDuration);
+            data.CharUnit.Scale(data.DisplayIndex == 0 ? featuredCharUnitScale : Vector2.one, charUnitSlideDuration);
         }
 
         public Vector2 GetCharPosition(int displayIndex)

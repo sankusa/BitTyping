@@ -25,6 +25,8 @@ namespace Sankusa.BitTyping.Domain
         public IObservable<Unit> OnAdvanceText => onAdvanceText;
         private readonly Subject<Unit> onAdvanceBinaryText = new Subject<Unit>();
         public IObservable<Unit> OnAdvanceBinaryText => onAdvanceBinaryText;
+        private Subject<bool> onInput = new Subject<bool>();
+        public IObservable<bool> OnInput => onInput;
 
         private int successBitCount = 0;
 
@@ -53,6 +55,8 @@ namespace Sankusa.BitTyping.Domain
 
         public void Input(bool input)
         {
+            onInput.OnNext(input);
+            
             if(binaryText.Count == 0) return;
             
             if(binaryText[0] == input)

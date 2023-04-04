@@ -10,6 +10,7 @@ namespace Sankusa.BitTyping.Presentation
     {
         [SerializeField] private TMP_Text text;
         private Tweener moveTweener;
+        private Tweener scaleTweener;
 
         public void SetText(string text)
         {
@@ -24,6 +25,16 @@ namespace Sankusa.BitTyping.Presentation
             }
 
             transform.DOMove(targetPos, duration).SetLink(gameObject);
+        }
+
+        public void Scale(Vector2 targetScale, float duration)
+        {
+            if(scaleTweener != null && scaleTweener.IsActive() && scaleTweener.IsPlaying())
+            {
+                scaleTweener.Kill();
+            }
+
+            transform.DOScale(targetScale, duration).SetLink(gameObject);
         }
 
         public void SetColor(Color color)

@@ -106,7 +106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8783013328818573114, guid: 7dd00757ffe14cb4a9b64b9d7ac8f254, type: 3}
       propertyPath: m_Name
-      value: Char Unit (TMP) Variant
+      value: Binary Unit (TMP)
       objectReference: {fileID: 0}
     - target: {fileID: 8853432716698858664, guid: 7dd00757ffe14cb4a9b64b9d7ac8f254, type: 3}
       propertyPath: m_text
@@ -114,11 +114,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8853432716698858664, guid: 7dd00757ffe14cb4a9b64b9d7ac8f254, type: 3}
       propertyPath: m_fontSize
-      value: 50
+      value: 58
+      objectReference: {fileID: 0}
+    - target: {fileID: 8853432716698858664, guid: 7dd00757ffe14cb4a9b64b9d7ac8f254, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.15093288
+      objectReference: {fileID: 0}
+    - target: {fileID: 8853432716698858664, guid: 7dd00757ffe14cb4a9b64b9d7ac8f254, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.8490566
+      objectReference: {fileID: 0}
+    - target: {fileID: 8853432716698858664, guid: 7dd00757ffe14cb4a9b64b9d7ac8f254, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.1481844
       objectReference: {fileID: 0}
     - target: {fileID: 8853432716698858664, guid: 7dd00757ffe14cb4a9b64b9d7ac8f254, type: 3}
       propertyPath: m_fontSizeBase
-      value: 50
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7dd00757ffe14cb4a9b64b9d7ac8f254, type: 3}
