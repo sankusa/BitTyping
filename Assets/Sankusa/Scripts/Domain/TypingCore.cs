@@ -9,8 +9,6 @@ namespace Sankusa.BitTyping.Domain
 {
     public class TypingCore
     {
-        private const string encodeCharacterCode = "shift-jis";
-
         private string text;
         private readonly List<bool> binaryText = new List<bool>();
         private readonly Subject<string> onAddText = new Subject<string>();
@@ -40,7 +38,7 @@ namespace Sankusa.BitTyping.Domain
 
         private void AddBinaryText(string additionalText)
         {
-            byte[] dataArray = Encoding.GetEncoding(encodeCharacterCode).GetBytes(additionalText);
+            byte[] dataArray = Encoding.Unicode.GetBytes(additionalText);
             List<bool> bits = new List<bool>();
             foreach(byte data in dataArray)
             {
@@ -56,7 +54,7 @@ namespace Sankusa.BitTyping.Domain
         public void Input(bool input)
         {
             onInput.OnNext(input);
-            
+
             if(binaryText.Count == 0) return;
             
             if(binaryText[0] == input)
